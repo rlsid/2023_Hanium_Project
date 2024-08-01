@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--메인 실행 홈-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="677dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--리니어 레이아웃 버티컬 1-->
+            <include layout="@layout/layout_content" />
+            <!--리니어 레이아웃 버티컬 2-->
+            <include layout="@layout/layout_content" />
+            <!--리니어 레이아웃 버티컬 3-->
+            <include layout="@layout/layout_content" />
+            <!--리니어 레이아웃 버티컬 4-->
+            <include layout="@layout/layout_content" />
+            <!--리니어 레이아웃 버티컬 5-->
+            <include layout="@layout/layout_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/representColor"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:itemIconTint="@drawable/menu_click_color"
+        app:itemTextColor="@drawable/menu_click_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu"/>
+
+
+</LinearLayout>

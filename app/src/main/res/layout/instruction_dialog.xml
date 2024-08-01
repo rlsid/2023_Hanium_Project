@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <ImageView-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:src="@drawable/logo"-->
+<!--            android:id="@+id/logo_img"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:text="촬영 시 주의사항"
+            android:fontFamily="@font/titlefont"
+            android:id="@+id/instruction_tv"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/close"
+            android:id="@+id/close_btn"
+            android:scaleType="fitXY"
+            android:background="#00ff0000"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/instruction1"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:background="@drawable/instruction_round"
+                android:text="1. 불빛의 조명에 따라 과일 식별의 결과는 다르게 나올 수 있습니다.\n (되도록 하얀 불빛 아래에서 촬영해주세요.)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/instruction2"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:background="@drawable/instruction_round"
+                android:text="2. 과일을 들고 촬영하는 경우 과일을 든 손이 최대한 보이지 않도록 촬영해주세요. (과일의 전체가 잘 보이도록 촬영해주세요.)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/instruction3"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:background="@drawable/instruction_round"
+                android:text="3. 다수의 과일을 촬영하는 경우 판별 결과의 정확도가 떨어질수 있습니다.\n(되도록 하나의 과일만 촬영해주세요.)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/instruction4"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:background="@drawable/instruction_round"
+                android:text="4. 과일의 신선도와 성숙도의 판별 기준은 개인마다 다를 수 있으므로 참고사항으로만 활용해주세요"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/instruction5"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:background="@drawable/instruction_round"
+                android:text="5. 화면 속 이미지에 있는 과일을 촬영할 경우 과일이 인식되지 않습니다."/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

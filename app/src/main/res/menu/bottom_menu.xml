@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/camera"
+        android:title="AI"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/community"
+        android:title="Community"
+        android:icon="@drawable/people"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/my"
+        android:title="Options"
+        android:icon="@drawable/user"
+        android:enabled="true"/>
+
+</menu>

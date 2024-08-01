@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--본문 글-->
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo"
+                    android:id="@+id/img_pro1"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"/>
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/img_pro1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:text="Farm"/>
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/more_dot"/>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/fruitbackground"
+                    android:scaleType="fitXY"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="과일 검색"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="과일의 이름을 입력하여 검색해주세요"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"/>
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchFruit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/transparent_round"
+                        android:elevation="5dp"
+                        app:iconifiedByDefault="false"
+                        app:queryHint="과일 이름을 입력하세요"
+                        app:searchIcon="@drawable/search_icon">
+                    </androidx.appcompat.widget.SearchView>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="이 달의 추천과일!"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_ll"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:elevation="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hot과일!! (Top3)"
+                    android:padding="5dp"
+                    android:id="@+id/tv"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@color/representColor"/>
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/rank1"
+                    android:layout_below="@+id/tv"
+                    android:scaleType="fitXY"
+                    android:padding="3dp"
+                    android:background="@color/white"
+                    android:id="@+id/rank1"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="1"
+                    android:drawableRight="@drawable/rank_btn"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left|center"
+                    android:drawablePadding="10dp"
+                    android:layout_below="@+id/tv"
+                    android:layout_toRightOf="@+id/rank1"
+                    android:id="@+id/hotFruit1"/>
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/rank2"
+                    android:scaleType="fitXY"
+                    android:padding="3dp"
+                    android:layout_below="@+id/rank1"
+                    android:background="@color/white"
+                    android:id="@+id/rank2"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="2"
+                    android:layout_marginLeft="30dp"
+                    android:drawableRight="@drawable/rank_btn"
+                    android:gravity="left|center"
+                    android:layout_below="@+id/hotFruit1"
+                    android:layout_toRightOf="@+id/rank2"
+                    android:id="@+id/hotFruit2"/>
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/rank3"
+                    android:scaleType="fitXY"
+                    android:padding="3dp"
+                    android:layout_below="@+id/rank2"
+                    android:background="@color/white"
+                    android:id="@+id/rank3"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="3"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left|center"
+                    android:layout_below="@+id/hotFruit2"
+                    android:drawableRight="@drawable/rank_btn"
+                    android:layout_toRightOf="@+id/rank3"
+                    android:id="@+id/hotFruit3"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:id="@+id/recommend_fl">
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:elevation="5dp"-->
+<!--                    android:layout_marginBottom="50dp"-->
+<!--                    android:id="@+id/hotfruit_list"/>-->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/setting_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/gray_round"
+                        android:padding="10dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/user_img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:padding="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/user" />
+
+                        <TextView
+                            android:id="@+id/recommend_tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_toRightOf="@+id/user_img"
+                            android:text="여기를 눌러 관심있는 영양소를 선택해주세요!"
+                            android:textColor="@color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recommend_tv1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_toRightOf="@+id/user_img"
+                            android:id="@+id/recommend_tv2"
+                            android:text="영양소를 선택하면 과일을 추천해드립니다."
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:id="@+id/recommend_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recommend_tv"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="9sp"
+                            android:id="@+id/addi_tv"
+                            android:text="* 아래 목록은 영양소 함유량이 많은 순서대로 나타납니다."/>
+
+                        <Button
+                            android:id="@+id/more_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:text="재설정 >>"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            android:background="#00ff0000"
+                            android:textColor="#F80505"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/more_btn"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/white"
+                            android:elevation="5dp"
+                            android:layout_marginBottom="50dp"
+                            android:id="@+id/fruit_list"/>
+                    </RelativeLayout>
+                </FrameLayout>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

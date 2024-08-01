@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CAC7C7"
+        android:layout_margin="20dp">
+        
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#A8A7A7"
+            android:id="@+id/img"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#A8A7A7"
+            android:id="@+id/user"
+            android:layout_toRightOf="@+id/img"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#A8A7A7"
+            android:id="@+id/flavor"
+            android:layout_below="@+id/user"
+            android:layout_toRightOf="@+id/img"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/img"
+            android:background="#A8A7A7"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+    
+        
+
+</LinearLayout>

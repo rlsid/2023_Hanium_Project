@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/review_background"
+    android:layout_margin="10dp"
+    android:elevation="5dp">
+
+<!--    review ID를 저장할 textView-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text=""
+        android:id="@+id/review_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/fruit_img"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/watermelon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="수박"
+        android:layout_toRightOf="@+id/fruit_img"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/fruit_name"
+        android:textColor="@color/black"/>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_below="@+id/fruit_name"-->
+<!--        android:layout_marginStart="10sp"-->
+<!--        android:layout_marginLeft="10sp"-->
+<!--        android:layout_marginTop="10sp"-->
+<!--        android:layout_marginEnd="10sp"-->
+<!--        android:layout_marginRight="10sp"-->
+<!--        android:layout_marginBottom="10sp"-->
+<!--        android:layout_toRightOf="@+id/fruit_img"-->
+<!--        android:background="#CCCACA" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/fruit_name"
+        android:layout_toRightOf="@+id/fruit_img"
+        android:id="@+id/id_tag"
+        android:background="@drawable/round_tag"
+        android:layout_marginLeft="10sp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/fruit_name"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_toRightOf="@+id/id_tag"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:id="@+id/user_id"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="맛"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/user_id"
+        android:layout_toRightOf="@+id/fruit_img"
+        android:id="@+id/taste_tag"
+        android:background="@drawable/round_tag"
+        android:layout_marginLeft="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_id"
+        android:maxLines="1"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:layout_toRightOf="@+id/taste_tag"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/flavor"
+        android:textColor="@color/black"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:background="#CCCACA"
+        android:layout_below="@+id/fruit_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fruit_img"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/content"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:text="10시간 전"
+        android:id="@+id/time"
+        android:textSize="10sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageButton
+        android:id="@+id/dialog"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/dialog" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/dialog">
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/content"
+            android:background="@color/white"
+            android:src="@drawable/heart"
+            android:layout_toLeftOf="@+id/dialog"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:id="@+id/heart"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/content"
+            android:background="@color/white"
+            android:src="@drawable/colorheart"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@+id/dialog"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:id="@+id/colorheart"/>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:text="수정"
+        android:id="@+id/update_btn"
+        android:textSize="12sp"
+        android:textColor="#F44336"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/content"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"
+        android:layout_toLeftOf="@+id/delete_btn"
+        android:background="@color/white"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:text="삭제"
+        android:id="@+id/delete_btn"
+        android:textColor="#F44336"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/content"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D1CDCD"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_below="@+id/time"
+        android:id="@+id/line"/>
+
+<!--    스크롤 가능한 edittext xml-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_comment"
+        android:layout_below="@id/time"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="50dp"
+        android:maxHeight="84dp"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        android:textSize="15sp"
+        android:hint="댓글을 입력해주세요..."
+        android:textColor="@color/black"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/check"
+        android:layout_marginTop="3dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/review_background"
+        android:layout_toRightOf="@+id/new_comment"
+        android:layout_below="@+id/time"
+        android:padding="10dp"
+        android:id="@+id/check"
+        android:layout_marginLeft="-50dp"/>
+
+</RelativeLayout>

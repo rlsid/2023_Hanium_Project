@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/left"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/back_btn"/>
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/back_btn"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="참외"
+        android:layout_below="@+id/viewFinder"
+        android:id="@+id/tv"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
+        android:id="@+id/status"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewFinder"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_ll"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="좋은 딸기"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="보통 딸기"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="상한 딸기"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="48dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="좋은 참외"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="75dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="보통 참외"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="75dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="상한 참외"/>-->
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/smile"
+                android:scaleType="fitXY"
+                android:layout_marginTop="48dp"
+                android:textColor="@color/black" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/normal"
+                android:scaleType="fitXY"
+                android:layout_marginTop="75dp"
+                android:textColor="@color/black" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/sad"
+                android:scaleType="fitXY"
+                android:layout_marginTop="75dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="30dp"
+                android:layout_toRightOf="@+id/tv_ll"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/fresh_chart" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="캡처"
+        android:layout_marginLeft="350dp"
+        android:visibility="invisible"
+        android:id="@+id/capture_btn"/>
+
+</RelativeLayout>

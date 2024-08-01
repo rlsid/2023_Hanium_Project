@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="촬영 결과"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/left"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/back_btn"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/fruit_img"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                android:background="@drawable/grayborder"
+                android:id="@+id/info_ll"
+                android:layout_below="@+id/fruit_img">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fruit_img"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:id="@+id/fruit_name"/>
+
+                <!--    신선도 text-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fruit_fresh"
+                    android:gravity="left"
+                    android:layout_below="@+id/fruit_name"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fruit_fresh"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/maturity_layout">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fruit_maturity"
+                        android:gravity="left"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:visibility="invisible"/>
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/empty"
+                        android:layout_marginTop="20dp"
+                        android:text="성숙도 판별중..."
+                        android:id="@+id/maturity_tv" />
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:id="@+id/simmer_layout1">
+
+                        <include layout="@layout/shimmer_layout1"/>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CFCCCC"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="신선도 (단위 : %)"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/maturity_layout"
+                    android:id="@+id/tv"
+                    android:layout_marginBottom="-30dp"/>
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/fresh_graph"
+                    android:layout_below="@+id/tv"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="성숙도 (단위 : %)"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/fresh_graph"
+                    android:id="@+id/tv2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="-30dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/tv2"
+                    android:id="@+id/maturity_fl">
+                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/matuiry_graph"
+                        android:visibility="invisible" />
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/shimmer_layout2">
+
+                        <include layout="@layout/shimmer_layout2"/>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="성숙도 판별중..."
+                        android:id="@+id/maturity_tv2" />
+
+                </FrameLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:layout_below="@+id/info_ll"
+                android:id="@+id/btn_ll">
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/fruit_info"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:id="@+id/info_btn"
+                    android:padding="5dp"
+                    android:background="#00ff0000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상세정보"
+                    android:textSize="10sp"
+                    android:layout_gravity="right"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/btn_ll"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

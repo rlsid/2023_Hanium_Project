@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="게시글 작성"
+            android:fontFamily="@font/titlefont"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:id="@+id/regist_title"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/close"
+            android:scaleType="fitXY"
+            android:background="@color/white"
+            android:id="@+id/close_btn"
+            android:layout_toRightOf="@+id/regist_title"
+            android:layout_marginLeft="-50dp"
+            android:layout_gravity="left"/>
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진 선택"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+<!--            R : 214 G : 214 B : 214-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#D6D6D6">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/image_view"
+                    android:background="@drawable/gray_round"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" />
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:id="@+id/image_button"
+                    android:src="@drawable/plus"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="과일 선택"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/spinner_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/choose_btn" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="맛 설명(선택)"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/flavor"
+                android:hint="맛을 설명해주세요!"
+                android:gravity="top"
+                android:textSize="12sp"
+                android:background="@drawable/basic_border"
+                android:padding="7dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내용(필수)"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="top"
+                android:hint="내용을 입력해주세요"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:padding="7dp"
+                android:id="@+id/content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/basic_border"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등록"
+                android:textColor="#F11000"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:id="@+id/regist_btn"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#00ff0000"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

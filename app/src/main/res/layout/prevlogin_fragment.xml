@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <!--    상단 로고-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:id="@+id/img_pro1"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_pro1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@android:color/black"
+            android:text="Farm"/>
+    </RelativeLayout>
+    <!--    상단 로고-->
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/user"
+        android:scaleType="fitXY"
+        android:id="@+id/user_img"
+        android:layout_marginLeft="30dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/login_btn"
+        android:text="로그인하기"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/guide_btn"
+        android:text="이용안내"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/review_btn"
+        android:text="나의 게시물 보기"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/category_btn"
+        android:text="과일추천 영양소 설정"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/logout_btn"
+        android:text="로그아웃"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/delete_user"
+        android:text="회원탈퇴"/>
+
+</LinearLayout>

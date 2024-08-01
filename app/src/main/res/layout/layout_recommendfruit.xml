@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:id="@+id/img_pro1"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_pro1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@android:color/black"
+            android:text="Farm"/>
+
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="fitCenter"
+            android:background="#ffffff"
+            android:id="@+id/close_btn"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/close"/>
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="원하는 영양소를 선택해주세요"
+        android:fontFamily="@font/titlefont"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:background="@drawable/transparent_round2"
+        android:padding="4dp"
+        android:text="최대 3개"
+        android:layout_gravity="left"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@drawable/grayborder"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민A"
+                android:layout_marginTop="10dp"
+                android:id="@+id/vitaminA"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="베타카로틴"
+                android:layout_marginTop="5dp"
+                android:id="@+id/betacarotin"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민B1(티아민)"
+                android:layout_marginTop="5dp"
+                android:id="@+id/vitaminB1"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민B2(리보플라빈)"
+                android:layout_marginTop="5dp"
+                android:id="@+id/vitaminB2"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민B3(나이아신,니코틴산)"
+                android:layout_marginTop="5dp"
+                android:id="@+id/vitaminB3"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민B6"
+                android:layout_marginTop="5dp"
+                android:id="@+id/vitaminB6"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="엽산"
+                android:layout_marginTop="5dp"
+                android:id="@+id/folicAcid"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비오틴"
+                android:layout_marginTop="5dp"
+                android:id="@+id/viotin"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민C"
+                android:layout_marginTop="5dp"
+                android:id="@+id/vitaminC"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민E"
+                android:layout_marginTop="5dp"
+                android:id="@+id/vitaminE"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비타민K"
+                android:layout_marginTop="5dp"
+                android:id="@+id/vitaminK"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="칼륨"
+                android:layout_marginTop="5dp"
+                android:id="@+id/callium"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="칼슘"
+                android:layout_marginTop="5dp"
+                android:id="@+id/caltuim"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="마그네슘"
+                android:layout_marginTop="5dp"
+                android:id="@+id/magnesium"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="인"
+                android:layout_marginTop="5dp"
+                android:id="@+id/iin"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="식이섬유소"
+                android:id="@+id/fabric"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/set_btn"
+            android:background="@drawable/transparent_round2"
+            android:text="설정 완료"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

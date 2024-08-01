@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/basic_border"
+    android:elevation="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:id="@+id/user_id"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_tv"
+        android:layout_below="@id/user_id"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_time"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="10sp"
+        android:text="시간"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="삭제"
+        android:background="@color/white"
+        android:layout_below="@+id/comment_tv"
+        android:layout_alignParentRight="true"
+        android:textColor="#F40707"
+        android:visibility="invisible"
+        android:id="@+id/delete_btn"/>
+
+</RelativeLayout>

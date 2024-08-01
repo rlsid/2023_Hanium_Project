@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grayborder"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <FrameLayout
+        android:layout_width="170dp"
+        android:layout_height="170dp">
+
+        <ImageView
+            android:id="@+id/fruit_img"
+            android:layout_width="170dp"
+            android:layout_height="164dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/strawberry" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="비타민A"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:background="#4D000000"
+            android:id="@+id/nutrition_tv"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B3B2B2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fruit_name"
+        android:layout_gravity="center|bottom"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="사과"/>
+
+
+
+</LinearLayout>

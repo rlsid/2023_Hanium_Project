@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:stretchColumns="0"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farm 회원가입"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textColor="#000000"/>
+            <TableRow>
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="아이디"
+                    android:layout_margin="20dp"
+                    android:textColor="#000000"
+                    android:layout_span="7"
+                    android:id="@+id/idEdit"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pwEdit"
+                    android:textColor="#000000"
+                    android:layout_margin="20dp"
+                    android:layout_span="7"
+                    android:inputType="textPassword"
+                    android:hint="비밀번호"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pwCheckEdit"
+                    android:layout_margin="20dp"
+                    android:textColor="#000000"
+                    android:layout_span="7"
+                    android:inputType="textPassword"
+                    android:hint="비밀번호 확인"/>
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_span="4"
+                    android:textColor="#000000"
+                    android:id="@+id/name"
+                    android:hint="이름"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:text="전화번호 : "
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="010"
+                    android:textColor="#000000"
+                    android:id="@+id/phone1"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" - "/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:hint="0000"
+                    android:id="@+id/phone2"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" - "/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:hint="0000"
+                    android:id="@+id/phone3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="                                       "/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:hint="나이"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:textColor="#000000"
+                    android:id="@+id/age"/>
+            </TableRow>
+
+            <TableRow>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_span="7"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_button1"
+                        android:text="가입하기"
+                        android:layout_marginRight="40dp"
+                        android:id="@+id/joinBtn"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="취소"
+                        android:background="@drawable/round_button1"
+                        android:id="@+id/cancelBtn"/>
+                </LinearLayout>
+            </TableRow>
+
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

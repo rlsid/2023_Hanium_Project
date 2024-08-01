@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+<!--    상단 로고-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:id="@+id/img_pro1"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_pro1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@android:color/black"
+            android:text="Farm"/>
+    </RelativeLayout>
+<!--    상단 로고-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/user"
+                android:scaleType="fitXY"
+                android:id="@+id/user_img"
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임"
+                android:layout_toRightOf="@+id/user_img"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:id="@+id/user_tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user"
+                android:layout_toRightOf="@+id/user_img"
+                android:layout_below="@+id/user_tv"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/user_id"
+                android:layout_marginTop="10dp"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/user_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/horizon_line"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/logout_btn"
+                android:background="@drawable/transparent_round2"
+                android:layout_below="@id/user_img"
+                android:layout_toLeftOf="@+id/horizon_line"
+                android:layout_marginRight="10dp"
+                android:text="로그아웃"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/delete_user"
+                android:layout_below="@+id/user_img"
+                android:background="@drawable/transparent_round2"
+                android:layout_toRightOf="@+id/horizon_line"
+                android:layout_marginLeft="10dp"
+                android:text="회원탈퇴"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_ll"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:background="@color/white"
+                    android:src="@drawable/login"
+                    android:padding="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/login_img"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#00ff0000"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left|center"
+                    android:text="로그인하기"
+                    android:id="@+id/login_btn"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/info_ll"
+                android:layout_below="@+id/login_ll"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:background="@color/white"
+                    android:src="@drawable/paper"
+                    android:padding="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/paper_btn1"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#00ff0000"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left|center"
+                    android:id="@+id/guide_btn2"
+                    android:text="이용안내"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/fruit_setting_ll"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/edit"
+            android:scaleType="fitXY"
+            android:background="@color/white"
+            android:id="@+id/setting_img"
+            android:layout_marginLeft="20dp"
+            android:padding="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/category_btn"
+            android:background="#00ff0000"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp"
+            android:gravity="left|center"
+            android:text="과일추천 영양소 설정"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/mypost_ll"
+        android:layout_marginTop="10dp">
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:background="@color/white"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/plusblack"
+            android:id="@+id/mypost_img"
+            android:padding="20dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/review_btn"
+            android:textSize="15sp"
+            android:gravity="left|center"
+            android:background="#00ff0000"
+            android:text="나의 게시물 보기"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/paper_btn2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white"
+            android:padding="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/paper" />
+
+        <Button
+            android:id="@+id/guide_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="left|center"
+            android:background="#00ff0000"
+            android:text="이용안내" />
+    </LinearLayout>
+
+
+</LinearLayout>
