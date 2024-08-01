@@ -1,0 +1,6 @@
+0 딸기 fresh
+1 딸기 normal
+2 딸기 rotten
+3 참외 fresh
+4 참외 normal
+5 참외 rotten
